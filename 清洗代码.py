@@ -77,3 +77,6 @@ print("无效订单数：", (~df['is_valid']).sum())
 # 计算有效总金额
 valid_total = df.loc[df['is_valid'], 'pay_amount'].sum()
 print("有效订单总金额：", round(valid_total, 2))
+
+# 将清洗后数据输出
+df.to_csv('order_data_2101.csv')
